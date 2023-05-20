@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Operating_Systems_HW2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OS_HW2_4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OS_HW2_4-Debug-5d0566feb66302230c05.json",
+					"name" : "OS_HW2_4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OS_HW2_5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OS_HW2_5-Debug-302d50d328421bf4fbf6.json",
+					"name" : "OS_HW2_5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OS_HW2_6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OS_HW2_6-Debug-c54b189686d0f632aff9.json",
+					"name" : "OS_HW2_6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OS_HW2_7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OS_HW2_7-Debug-9884823ae38cfc3016ee.json",
+					"name" : "OS_HW2_7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OS_HW2_8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OS_HW2_8-Debug-9451a9d266ce2c0cbc2e.json",
+					"name" : "OS_HW2_8",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug",
+		"source" : "/home/artem/projects/os/ihws/Operating-Systems-HW2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

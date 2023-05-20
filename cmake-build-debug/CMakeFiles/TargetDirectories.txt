@@ -1,0 +1,7 @@
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/OS_HW2_4.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/OS_HW2_5.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/OS_HW2_6.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/OS_HW2_7.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/OS_HW2_8.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/artem/projects/os/ihws/Operating-Systems-HW2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
