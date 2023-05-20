@@ -4,7 +4,7 @@ project(Operating_Systems_HW2)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(OS_HW2_4
-        score4/main.c)
+        score4-5/main.c)
 
 add_executable(OS_HW2_5
         score5/main.c)
