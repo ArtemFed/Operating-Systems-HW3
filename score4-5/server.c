@@ -6,35 +6,16 @@
 #include <arpa/inet.h>
 #include <pthread.h>
 
-#include <fcntl.h>
-#include <semaphore.h>
 #include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/ipc.h>
-#include <sys/mman.h>
-#include <sys/sem.h>
-#include <sys/shm.h>
 #include <sys/types.h>
-#include <sys/wait.h>
-#include <time.h>
-#include <unistd.h>
 #include <stdbool.h>
 
-#define NUM_FLOWERS 40
-#define GARDENER_POWER 20
-#define HEIGHT 5// Длина клумбы
-#define WIDTH 8 // Ширина клумбы
+#define NUM_FLOWERS 20
+#define HEIGHT 4 // Длина клумбы
+#define WIDTH 5 // Ширина клумбы
+
 #define FLOWERS_SLEEP 10
 #define GARDENER_SLEEP 1
-#define CAN_MIN_VOLUME 5  // Минимальный объём лейки для полива (некоторые цветы точно будут умирать)
-#define CAN_RANDOM_VOLUME 5// Random max
-
-#define SEM_NAME "/garden_semaphore"// Имя семафора
-#define SHM_NAME "/garden"          // Имя памяти
-#define KEY 1234// Ключ для доступа к ресурсам
-
-#define PORT 8080
 
 
 // Состояние цветка
@@ -100,10 +81,12 @@ void *connectionHandler(void *socket_desc) {
     read(new_socket, &gardener_id, sizeof(int));
 
     while (garden->is_started) {
+        sleep(1);
+
         printf("Day №%d. Gardener №%d started working.\n", garden->cur_day, gardener_id);
 
         int countOfWateredFlowers = 0;
-        for (int i = 0; i < GARDENER_POWER; i++) {
+        for (int i = 0; i < NUM_FLOWERS / 2; i++) {
             read(new_socket, &index, sizeof(int));
 
             answer = 0;
@@ -200,6 +183,27 @@ int main(int argc, char const *argv[]) {
 //    signal(SIGINT, sigfunc);
 //    signal(SIGTERM, sigfunc);
 
+    unsigned short server_port;
+    int all_days_count = 0;
+    // Чтение входных данных
+    {
+        server_port = 8080;
+        all_days_count = 3;
+        srand(42);
+        if (argc >= 2) {
+            // Порт сервера
+            server_port = atoi(argv[1]);
+        }
+        if (argc >= 3) {
+            // Сколько дней отобразить
+            all_days_count = atoi(argv[2]);
+        }
+        if (argc >= 4) {
+            // Рандомизированный ввод
+            srand(atoi(argv[3]));
+        }
+    }
+
     int server_fd, new_socket;
     struct sockaddr_in address;
     int opt = 1;
@@ -220,11 +224,11 @@ int main(int argc, char const *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    memset(&address, '0', sizeof(address));
+    memset(&address, 0, sizeof(address));
 
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
+    address.sin_port = htons(server_port);
 
     // Привязываем сокет к адресу и порту
     if (bind(server_fd, (struct sockaddr *) &address, sizeof(address)) < 0) {
@@ -238,27 +242,10 @@ int main(int argc, char const *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    printf("INIT 1\n");
-
     garden = malloc(sizeof(Garden));
 
-    int all_days_count = 0;
-    // Чтение входных данных
-    {
-        all_days_count = 3;
-//        srand(42);
-        // TODO: Поменять на 3 и 4 argc
-        if (argc >= 2) {
-            // Сколько дней отобразить
-            all_days_count = atoi(argv[1]);
-        }
-        if (argc >= 3) {
-            // Рандомизированный ввод
-            srand(atoi(argv[2]));
-        }
-        garden->all_days_count = all_days_count;
-    }
-    printf("INIT 2\n");
+    garden->all_days_count = all_days_count;
+
     // Инициализируем состояние клумбы
     for (int i = 0; i < NUM_FLOWERS; i++) {
         garden->flowers[i] = WATERED;

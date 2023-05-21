@@ -1,31 +1,17 @@
-#include <fcntl.h>
-#include <semaphore.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/ipc.h>
-#include <sys/mman.h>
-#include <sys/sem.h>
-#include <sys/shm.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdbool.h>
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <sys/time.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 
 
-#define NUM_FLOWERS 40
-#define GARDENER_POWER 20
-#define GARDENER_SLEEP 9
-
-#define PORT 8080
+#define NUM_FLOWERS 20
+#define GARDENER_SLEEP 1
 
 
 void sigfunc(int sig) {
@@ -38,22 +24,27 @@ void sigfunc(int sig) {
 }
 
 int main(int argc, char const *argv[]) {
+    unsigned short server_port;
+    const char *server_ip;
+
     int sock = 0;
     struct sockaddr_in serv_addr;
-    char buffer[1024] = {0};
     int server_answer_1 = 0;
     int server_answer_2 = 0;
 
-    srand(time(NULL));
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    int milliseconds = tv.tv_usec / 1000;
+    srand(milliseconds);
 
-    // Получаем значения m, n, h с помощью аргументов командной строки
-    //    if (argc != 4) {
-    //        printf("Usage: %s <m> <n> <h>\n", argv[0]);
-    //        return -1;
-    //    }
+    // Получаем значения port и server IP с помощью аргументов командной строки
+    if (argc != 3) {
+        printf("Args: <port> <SERVER_IP>\n");
+        return -1;
+    }
 
-    //    m = atoi(argv[1]);
-    //    h = atoi(argv[3]);
+    server_port = atoi(argv[1]);
+    server_ip = argv[2];
 
     // Создаем TCP сокет
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -61,13 +52,14 @@ int main(int argc, char const *argv[]) {
         return -1;
     }
 
-    memset(&serv_addr, '0', sizeof(serv_addr));
+    memset(&serv_addr, 0, sizeof(serv_addr));
 
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(PORT);
+//    serv_addr.sin_addr.s_addr = inet_addr(server_ip);
+    serv_addr.sin_port = htons(server_port);
 
     // Устанавливаем адрес сервера
-    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, server_ip, &serv_addr.sin_addr) <= 0) {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
     }
@@ -78,15 +70,20 @@ int main(int argc, char const *argv[]) {
         return -1;
     }
 
-    int gardener_id = rand() % 99 + 1;
+    int gardener_id = rand() % 90 + 10;
     send(sock, &gardener_id, sizeof(int), 0);
 
     bool server_is_connected = true;
 
     while (server_is_connected) {
+        server_answer_1 = 0;
+        server_answer_2 = 0;
         printf("Gardener №%d woke up.\n", gardener_id);
 
-        for (int i = 0; i < GARDENER_POWER; ++i) {
+        for (int i = 0; i < NUM_FLOWERS / 2; ++i) {
+            if (i % 3 == 0) {
+                sleep(GARDENER_SLEEP);
+            }
             // Отправляем значения index на сервер
             int index = rand() % NUM_FLOWERS;
             printf("Gardener №%d: Choose flower №%d\n", gardener_id, index);
@@ -110,7 +107,7 @@ int main(int argc, char const *argv[]) {
         read(sock, &server_answer_2, sizeof(server_answer_2));
         printf("Gardener №%d has ended his work. Gardener watered %d flowers\n", gardener_id, server_answer_2);
 
-        sleep(GARDENER_SLEEP);
+        sleep(GARDENER_SLEEP * 4);
     }
 
     return 0;
