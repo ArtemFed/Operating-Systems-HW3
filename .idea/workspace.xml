@@ -23,15 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ddf527-bbeb-40c3-8f46-94261ba4f7d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Operating-Systems-HW3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Operating-Systems-HW3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score4/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/score4-5/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -56,7 +56,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/artem/Documents/GitHub/Operating-Systems-HW3",
+    "last_opened_file_path": "/home/artem/projects/os/ihws/Operating-Systems-HW3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,11 +92,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="main.c" CONFIG_NAME="main.c">
       <option name="sourceFile" value="score4\main.c" />
       <method v="2">
@@ -125,6 +120,7 @@
       <updated>1682238732502</updated>
       <workItem from="1682238733136" duration="12213000" />
       <workItem from="1684603203648" duration="1141000" />
+      <workItem from="1684616987938" duration="6533000" />
     </task>
     <servers />
   </component>
