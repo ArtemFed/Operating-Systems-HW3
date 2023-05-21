@@ -26,20 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ddf527-bbeb-40c3-8f46-94261ba4f7d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/score6-8/client.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/score6-8/server.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/score6-8/viewer.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score4-5/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/score4-5/client.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score5/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score6/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score7/data.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score7/main_flower.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score7/main_gardeners.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score8/data.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score8/main_flower.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score8/main_gardeners.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,25 +51,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.advertisement.text.overridden": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/artem/projects/os/ihws/Operating-Systems-HW3/score6-8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/artem/projects/os/ihws/Operating-Systems-HW3/score6-8&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/score6-8" />
@@ -106,6 +94,11 @@
       </method>
     </configuration>
     <configuration name="OS_HW2_6" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating_Systems_HW2" TARGET_NAME="OS_HW2_6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Operating_Systems_HW2" RUN_TARGET_NAME="OS_HW2_6">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
