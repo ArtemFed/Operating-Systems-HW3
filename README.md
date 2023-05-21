@@ -94,6 +94,9 @@
 
 [Код программы](https://github.com/ArtemFed/Operating-Systems-HW3/tree/main/score6-7)
 #### 1. Специфика: <br/>
+
+![hw3_9](https://github.com/ArtemFed/Operating-Systems-HW3/assets/57373162/351feec4-adf4-48d9-bb47-a63d94e69dcd)
+
 Добавлена возможность подключения множества клиентов-наблюдателей, они могут быть подключены и отключеный в любой момент
 Аккуратно завершаются вместе с окончанием работы сервера
 
