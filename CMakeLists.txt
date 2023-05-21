@@ -10,7 +10,7 @@ add_executable(OS_HW2_5
         score5/main.c)
 
 add_executable(OS_HW2_6
-        score6/main.c)
+        score6-8/main.c)
 
 add_executable(OS_HW2_7
         score7/main_flower.c

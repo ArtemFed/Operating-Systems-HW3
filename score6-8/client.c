@@ -14,21 +14,12 @@
 #define GARDENER_SLEEP 1
 
 
-void sigfunc(int sig) {
-    if (sig != SIGINT && sig != SIGTERM) {
-        return;
-    }
-
-    printf("Sig finished\n");
-    exit(10);
-}
-
 int main(int argc, char const *argv[]) {
     unsigned short server_port;
     const char *server_ip;
 
     int sock = 0;
-    struct sockaddr_in serv_addr;
+    struct sockaddr_in server_addr;
     int server_answer_1 = 0;
     int server_answer_2 = 0;
 
@@ -52,22 +43,25 @@ int main(int argc, char const *argv[]) {
         return -1;
     }
 
-    memset(&serv_addr, 0, sizeof(serv_addr));
+    memset(&server_addr, 0, sizeof(server_addr));
 
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(server_port);
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(server_port);
 
     // Устанавливаем адрес сервера
-    if (inet_pton(AF_INET, server_ip, &serv_addr.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, server_ip, &server_addr.sin_addr) <= 0) {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
     }
 
     // Подключаемся к серверу
-    if (connect(sock, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
+    if (connect(sock, (struct sockaddr *) &server_addr, sizeof(server_addr)) < 0) {
         printf("\nConnection Failed \n");
         return -1;
     }
+
+    char type = 'g';
+    send(sock, &type, sizeof(char), 0);
 
     int gardener_id = rand() % 90 + 10;
     send(sock, &gardener_id, sizeof(int), 0);

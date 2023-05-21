@@ -26,10 +26,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ddf527-bbeb-40c3-8f46-94261ba4f7d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/score6-8/client.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/score6-8/server.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/score6-8/viewer.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score4-5/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/score4-5/client.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score4-5/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/score4-5/server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score5/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score6/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score7/data.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score7/main_flower.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score7/main_gardeners.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score8/data.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score8/main_flower.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score8/main_gardeners.c" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +72,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/artem/projects/os/ihws/Operating-Systems-HW3",
+    "last_opened_file_path": "/home/artem/projects/os/ihws/Operating-Systems-HW3/score6-8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +84,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/score6-8" />
       <recent name="C:\Users\artem\Documents\GitHub\Operating-Systems-HW2\prog6" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -83,7 +94,7 @@
       <recent name="C:\Users\artem\Documents\GitHub\Operating-Systems-HW2" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.server.c">
+  <component name="RunManager" selected="C/C++ File.viewer.c">
     <configuration name="OS_HW2_4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating_Systems_HW2" TARGET_NAME="OS_HW2_4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Operating_Systems_HW2" RUN_TARGET_NAME="OS_HW2_4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -99,14 +110,20 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="client.c (1)" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="client.c" CONFIG_NAME="client.c">
+      <option name="sourceFile" value="score6-8/client.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="client.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="client.c" CONFIG_NAME="client.c">
       <option name="sourceFile" value="score4-5/client.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="main.c" CONFIG_NAME="main.c">
-      <option name="sourceFile" value="score4\main.c" />
+    <configuration name="server.c (1)" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="server.c" CONFIG_NAME="server.c">
+      <option name="sourceFile" value="score6-8/server.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
@@ -117,19 +134,29 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="viewer.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Operating-Systems-HW3" TARGET_NAME="viewer.c" CONFIG_NAME="viewer.c">
+      <option name="sourceFile" value="score6-8/viewer.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="C/C++ File.client.c" />
+      <item itemvalue="C/C++ File.client.c (1)" />
       <item itemvalue="C/C++ File.server.c" />
-      <item itemvalue="C/C++ File.main.c" />
+      <item itemvalue="C/C++ File.server.c (1)" />
+      <item itemvalue="C/C++ File.viewer.c" />
       <item itemvalue="CMake Application.OS_HW2_4" />
       <item itemvalue="CMake Application.OS_HW2_5" />
       <item itemvalue="CMake Application.OS_HW2_6" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.viewer.c" />
+        <item itemvalue="C/C++ File.server.c (1)" />
+        <item itemvalue="C/C++ File.client.c (1)" />
         <item itemvalue="C/C++ File.server.c" />
         <item itemvalue="C/C++ File.client.c" />
-        <item itemvalue="C/C++ File.main.c" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +170,7 @@
       <updated>1682238732502</updated>
       <workItem from="1682238733136" duration="12213000" />
       <workItem from="1684603203648" duration="1141000" />
-      <workItem from="1684616987938" duration="13407000" />
+      <workItem from="1684616987938" duration="19561000" />
     </task>
     <servers />
   </component>
